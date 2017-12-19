@@ -1,3 +1,3 @@
 # Udacity_MLF
 
-Udacity Machine Learning Foundations
+Udacity Machine Learning Foundation
