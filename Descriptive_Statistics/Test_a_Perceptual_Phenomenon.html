@@ -11841,14 +11841,32 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer</strong></p>
-<p>Appropriate set of hypotheses for this task.</p>
 <ul>
-<li>$\mu_{0}$ - Time it takes to name the ink colors for both congruent and incongruent words is the same.</li>
-<li>$\mu_{a}$ - Time it takes to name the ink colors for both congruent and incongruent words is <strong>not</strong> the same.</li>
+<li>$\mu_{C}$ - Time it takes to name the ink colors for congruent condition.</li>
+<li>$\mu_{I}$ - Time it takes to name the ink colors for incongruent condition.</li>
+</ul>
+<p>Appropriate set of hypothesis for this task.</p>
+<ul>
+<li>$H_{o}$ - Time it takes to name the ink colors for congruent condition and incongruent condition is the same.</li>
+<li>$H_{a}$ - Time it takes to name the ink colors for congruent condition and incongruent condition is <strong>not</strong> the same.</li>
+</ul>
+<p>The hypothesis can also be stated as below.</p>
+<ul>
+<li>$H_{o}$ - ($\mu_{C}$ - $\mu_{I}$ = 0): There is <strong>no</strong> significant difference in time for the population to state the colors in a congruent or incongruent condition.</li>
+<li>$H_{a}$ - ($\mu_{C}$ - $\mu_{I} \neq$ 0): There is a significant difference in time for the population to state the colors in a congruent or incongruent condition.</li>
 </ul>
 <p>Statistical test that can be performed on this data</p>
 <ul>
-<li>We can perform a 2 sample t-test on this data as we are trying to test for the difference between two independent variables.</li>
+<li>We will perform a 2 sample t-test on this data for the below reasons:<ul>
+<li>We are testing a hypothesis.</li>
+<li>We have a quantitative response variable.</li>
+<li>We do not know the population standard devaition.</li>
+<li>We have a sample size less than 30.</li>
+<li>We have a paired sample.</li>
+<li>We have 1 treatment variable and 2 categories</li>
+<li>We have a normally distributed data.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -11867,7 +11885,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11885,7 +11903,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read the data set</span>
@@ -11913,7 +11931,7 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12072,7 +12090,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Describe the data</span>
@@ -12087,7 +12105,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12175,7 +12193,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print measures of central tendency</span>
@@ -12263,7 +12281,7 @@ Standard Deviation of Incongruent Data -&gt; 4.797057122469138
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -12506,7 +12524,7 @@ mIFMkiRpYAYySZKkgRnIJEmSBvb/AA3JJQE1LPpIAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -12746,7 +12764,7 @@ $$
 \Large
 t = \frac{\mu_{C} - \mu_{I}}{\frac{S}{\sqrt{n}}}
 $$<p><strong>t-statistical = -8.021 </strong></p>
-<blockquote><p>As the t-statistical value is greater than the t-critical we will <strong>reject</strong> the null hypothesis</p>
+<blockquote><p>As the t-statistical value is less than the t-critical and falls in the critical region we will <strong>reject</strong> the null hypothesis</p>
 </blockquote>
 
 </div>
@@ -12783,6 +12801,8 @@ $$<p><strong>t-statistical = -8.021 </strong></p>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Stroop_effect">https://en.wikipedia.org/wiki/Stroop_effect</a></li>
 <li><a href="https://onlinecourses.science.psu.edu/statprogram/node/136">https://onlinecourses.science.psu.edu/statprogram/node/136</a></li>
+<li><a href="http://www.efoza.com/postpic/2012/05/statistical-test-flow-chart_237102.jpg">http://www.efoza.com/postpic/2012/05/statistical-test-flow-chart_237102.jpg</a></li>
+<li><a href="https://stats.idre.ucla.edu/spss/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-spss/">https://stats.idre.ucla.edu/spss/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-spss/</a></li>
 </ol>
 
 </div>
